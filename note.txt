@@ -1,3 +1,10 @@
 npx create-react-app material-ui-react-001  // create a project
 yarn add @material-ui/core  // to install Material-ui package
 yarn start  //to run the app 
+yarn add @material-ui/icons  // to install MUI-icons package
+
+import Button from "@material-ui/core/Button";  // first import a component, you want to use.
+// can easly pass a link here
+  <Button href="#" variant="contained" color="primary">
+          Hello World
+ </Button>
