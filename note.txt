@@ -1,0 +1,3 @@
+npx create-react-app material-ui-react-001  // create a project
+yarn add @material-ui/core  // to install Material-ui package
+yarn start  //to run the app 
