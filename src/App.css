@@ -12,6 +12,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+/*overriding default color*/
+input {
+  color: rgb(39, 121, 194) !important;
+}
 
 .App-header {
   background-color: #282c34;
