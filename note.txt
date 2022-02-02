@@ -8,3 +8,7 @@ import Button from "@material-ui/core/Button";  // first import a component, you
   <Button href="#" variant="contained" color="primary">
           Hello World
  </Button>
+ endIcon={<SaveIcon />}  //to move the Icon to the end of our button
+ startIcon={<SaveIcon />} // to move icon to the start(beginning)
+
+ <ButtonGroup />  - to add multiple buttons
