@@ -12,3 +12,10 @@ import Button from "@material-ui/core/Button";  // first import a component, you
  startIcon={<SaveIcon />} // to move icon to the start(beginning)
 
  <ButtonGroup />  - to add multiple buttons
+
+ <Checkbox /> // if you want to pass additional props beside the default ones here(onChange, disabled, color, checked others) we're going to have to pass them inside the 'inputProps{{}}'(inputProps as a prop title), inside we might wanna pass in a label, like:
+ inputProps={{
+   'aria-label': 'secondary checkbox'
+ }}
+
+  <FormControlLabel /> pass the <Checkbox /> as value for control prop.
