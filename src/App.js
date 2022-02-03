@@ -13,11 +13,13 @@ import {
   createTheme,
 } from "@material-ui/core/styles";
 import { green, lightBlue } from "@material-ui/core/colors";
+import "fontsource-roboto";
+import { Typography } from "@material-ui/core";
 
 //custom styling for button
 const useStyles = makeStyles({
   root: {
-    background: "linear-gradient(45deg, #FE6B8B, #999)",
+    background: "linear-gradient(45deg, blue, #999, green)",
     border: 0,
     borderRadius: 15,
     color: "white",
@@ -31,7 +33,7 @@ function ButtonStyled() {
   return <Button className={classes.root}>Test Styled Button</Button>;
 }
 
-//custom theme
+//custom theme for color and typography
 const theme = createTheme({
   palette: {
     primary: {
@@ -40,6 +42,16 @@ const theme = createTheme({
     },
     secondary: {
       main: lightBlue[500],
+    },
+  },
+  typography: {
+    h2: {
+      fontSize: 35,
+      fontFamily: "Times New Roman",
+      marginBottom: 10,
+    },
+    subtitle1: {
+      fontFamily: "fantasy",
     },
   },
 });
@@ -67,12 +79,16 @@ function App() {
     <ThemeProvider theme={theme}>
       <div className="App">
         <header className="App-header">
+          <Typography variant="h2" align="left" component="div">
+            Welcome to MUI course
+          </Typography>
+          <Typography variant="subtitle1">Learn how to use MUI</Typography>
           <ButtonStyled />
           <TextField
             variant="filled"
             color="primary.light"
             type="email"
-            label="Contact me"
+            label="Click here to email"
             placeholder="email@email.com"
           />
           <CheckBoxExample />
