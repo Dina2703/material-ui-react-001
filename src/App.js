@@ -1,12 +1,7 @@
 import "./App.css";
+import { useState } from "react";
 import SaveIcon from "@material-ui/icons/Save";
 import Delete from "@material-ui/icons/Delete";
-import ButtonGroup from "@material-ui/core/ButtonGroup";
-import Button from "@material-ui/core/Button";
-import Checkbox from "@material-ui/core/Checkbox";
-import { useState } from "react";
-import FormControlLabel from "@material-ui/core/FormControlLabel";
-import TextField from "@material-ui/core/TextField";
 import {
   makeStyles,
   ThemeProvider,
@@ -14,7 +9,21 @@ import {
 } from "@material-ui/core/styles";
 import { green, lightBlue } from "@material-ui/core/colors";
 import "fontsource-roboto";
-import { Container, Typography, Paper, Grid } from "@material-ui/core";
+import {
+  Container,
+  Typography,
+  Paper,
+  Grid,
+  TextField,
+  FormControlLabel,
+  ButtonGroup,
+  Button,
+  Checkbox,
+  AppBar,
+  Toolbar,
+  IconButton,
+} from "@material-ui/core";
+import { Menu } from "@material-ui/icons";
 
 //custom styling for button
 const useStyles = makeStyles({
@@ -91,6 +100,15 @@ function App() {
       <Container maxWidth="sm">
         <div className="App">
           <header className="App-header">
+            <AppBar color="secondary">
+              <Toolbar>
+                <IconButton>
+                  <Menu></Menu>
+                </IconButton>
+                <Typography variant="h6">MUI Course</Typography>
+                <Button>Login</Button>
+              </Toolbar>
+            </AppBar>
             <Typography variant="h2" align="left" component="div">
               Welcome to MUI course
             </Typography>
