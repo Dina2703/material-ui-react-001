@@ -19,3 +19,11 @@ import Button from "@material-ui/core/Button";  // first import a component, you
  }}
 
   <FormControlLabel /> pass the <Checkbox /> as value for control prop.
+  import { makeStyles } from "@material-ui/core/styles";   /for adding custom style, look at app.js  as an example.
+
+  _________________MUI Typography______________
+  yarn add fontsource-roboto  //install the default font for MUI
+
+  -------------GRID-------------
+  <Grid> component can be a container or an item, just add boolean name(item, container )
+  <Paper /> 

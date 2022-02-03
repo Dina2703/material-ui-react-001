@@ -14,7 +14,7 @@ import {
 } from "@material-ui/core/styles";
 import { green, lightBlue } from "@material-ui/core/colors";
 import "fontsource-roboto";
-import { Typography } from "@material-ui/core";
+import { Container, Typography, Paper, Grid } from "@material-ui/core";
 
 //custom styling for button
 const useStyles = makeStyles({
@@ -39,13 +39,7 @@ function ButtonStyled() {
 function TextFieldStyled() {
   const classes = useStyles();
   return (
-    <TextField
-      className={classes.textField}
-      variant="filled"
-      type="email"
-      label="Contact Me"
-      placeholder="email@email.com"
-    />
+    <TextField className={classes.textField} variant="filled" type="date" />
   );
 }
 
@@ -93,40 +87,83 @@ function CheckBoxExample() {
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App">
-        <header className="App-header">
-          <Typography variant="h2" align="left" component="div">
-            Welcome to MUI course
-          </Typography>
-          <Typography variant="subtitle1">Learn how to use MUI</Typography>
-          <ButtonStyled />
-          <TextField
-            variant="filled"
-            color="primary.light"
-            type="email"
-            label="Click here to email"
-            placeholder="email@email.com"
-          />
-          <CheckBoxExample />
-          <TextFieldStyled />
-          <ButtonGroup size="small" variant="contained">
-            <Button
+      <Container maxWidth="sm">
+        <div className="App">
+          <header className="App-header">
+            <Typography variant="h2" align="left" component="div">
+              Welcome to MUI course
+            </Typography>
+            <Typography variant="subtitle1">Learn how to use MUI</Typography>
+            <Grid container spacing={3} justifyContent="center">
+              <Grid item>
+                <Paper
+                  style={{
+                    height: 75,
+                    width: 50,
+                    marginBottom: 10,
+                  }}
+                  elevation={6}
+                />
+              </Grid>
+              <Grid item>
+                <Paper
+                  style={{
+                    height: 75,
+                    width: 50,
+                    marginBottom: 10,
+                  }}
+                  elevation={3}
+                />
+              </Grid>
+              <Grid item>
+                <Paper
+                  style={{
+                    height: 75,
+                    width: 50,
+                    marginBottom: 10,
+                  }}
+                />
+              </Grid>
+              <Grid item>
+                <Paper
+                  style={{
+                    height: 75,
+                    width: 50,
+                    marginBottom: 10,
+                  }}
+                />
+              </Grid>
+            </Grid>
+
+            <ButtonStyled />
+            <TextField
+              variant="filled"
               color="primary"
-              onClick={() => alert("saved")}
-              startIcon={<SaveIcon />}
-            >
-              Save
-            </Button>
-            <Button
-              color="secondary"
-              onClick={() => alert("discarded")}
-              endIcon={<Delete />}
-            >
-              Discard
-            </Button>
-          </ButtonGroup>
-        </header>
-      </div>
+              type="email"
+              label="Click here to email"
+              placeholder="email@email.com"
+            />
+            <CheckBoxExample />
+            <TextFieldStyled />
+            <ButtonGroup size="small" variant="contained">
+              <Button
+                color="primary"
+                onClick={() => alert("saved")}
+                startIcon={<SaveIcon />}
+              >
+                Save
+              </Button>
+              <Button
+                color="secondary"
+                onClick={() => alert("discarded")}
+                endIcon={<Delete />}
+              >
+                Discard
+              </Button>
+            </ButtonGroup>
+          </header>
+        </div>
+      </Container>
     </ThemeProvider>
   );
 }
