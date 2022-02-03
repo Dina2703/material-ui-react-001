@@ -26,11 +26,27 @@ const useStyles = makeStyles({
     padding: "5px 30px",
     marginBottom: 15,
   },
+  textField: {
+    background: "linear-gradient(150deg, orange, red)",
+    marginBottom: 15,
+  },
 });
 
 function ButtonStyled() {
   const classes = useStyles();
   return <Button className={classes.root}>Test Styled Button</Button>;
+}
+function TextFieldStyled() {
+  const classes = useStyles();
+  return (
+    <TextField
+      className={classes.textField}
+      variant="filled"
+      type="email"
+      label="Contact Me"
+      placeholder="email@email.com"
+    />
+  );
 }
 
 //custom theme for color and typography
@@ -92,6 +108,7 @@ function App() {
             placeholder="email@email.com"
           />
           <CheckBoxExample />
+          <TextFieldStyled />
           <ButtonGroup size="small" variant="contained">
             <Button
               color="primary"
