@@ -26,6 +26,7 @@ const useStyles = makeStyles({
     padding: "5px 30px",
     marginBottom: 15,
   },
+
   textField: {
     background: "linear-gradient(150deg, orange, red)",
     marginBottom: 15,
@@ -94,41 +95,40 @@ function App() {
               Welcome to MUI course
             </Typography>
             <Typography variant="subtitle1">Learn how to use MUI</Typography>
-            <Grid container spacing={3} justifyContent="center">
-              <Grid item>
+            <Grid container spacing={4} justifyContent="center">
+              <Grid item xs={12} sm={10}>
                 <Paper
                   style={{
                     height: 75,
-                    width: 50,
-                    marginBottom: 10,
+                    width: "100%",
                   }}
                   elevation={6}
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={3} sm={3}>
                 <Paper
                   style={{
                     height: 75,
-                    width: 50,
+                    width: "100%",
                     marginBottom: 10,
                   }}
                   elevation={3}
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={3} sm={3}>
                 <Paper
                   style={{
                     height: 75,
-                    width: 50,
+                    width: "100%",
                     marginBottom: 10,
                   }}
                 />
               </Grid>
-              <Grid item>
+              <Grid item xs={3} sm={3}>
                 <Paper
                   style={{
                     height: 75,
-                    width: 50,
+                    width: "100%",
                     marginBottom: 10,
                   }}
                 />
